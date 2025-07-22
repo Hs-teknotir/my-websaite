@@ -1,0 +1,87 @@
+/* =============================================================================
+   THEME.CSS
+   Light & Dark Theme Control
+   Default: Dark theme.
+   Override with: <html data-theme="light"> or <html data-theme="dark">
+============================================================================= */
+
+/* === TRANSITION: Smooth switch between themes === */
+html {
+  transition: background-color var(--transition-slow),
+              color var(--transition-slow),
+              border-color var(--transition-slow);
+}
+
+/* =============================================================================
+   DARK THEME (DEFAULT)
+============================================================================= */
+:root {
+  /* Background & Surface */
+  --color-bg: var(--color-gray-900);
+  --color-surface: #111827;
+
+  /* Text & Headings */
+  --color-text: #e0e8f0;
+  --color-text-muted: #94a3b8;
+  --color-heading: #f5faff;
+  --color-text-strong: var(--color-white);
+
+  /* Border */
+  --color-border: rgba(255, 255, 255, 0.1);
+
+  /* Accent Colors */
+  --color-primary: var(--color-gold);    /* Main accent */
+  --color-secondary: var(--color-blue);  /* Secondary accent */
+
+  /* Shadows */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* =============================================================================
+   LIGHT THEME
+   Activated via: <html data-theme="light">
+============================================================================= */
+[data-theme="light"] {
+  /* Background & Surface */
+  --color-bg: #ffffff;
+  --color-surface: #f9fafb;
+
+  /* Text & Headings */
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-heading: #0f172a;
+  --color-text-strong: #000000;
+
+  /* Border */
+  --color-border: rgba(0, 0, 0, 0.1);
+
+  /* Accent Colors (same as dark) */
+  --color-primary: var(--color-gold);
+  --color-secondary: var(--color-blue);
+
+  /* Shadows */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* =============================================================================
+   SYSTEM PREFERENCE OVERRIDE
+   When no explicit data-theme is set, respects user OS preference.
+============================================================================= */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --color-bg: #ffffff;
+    --color-surface: #f9fafb;
+
+    --color-text: #1e293b;
+    --color-text-muted: #64748b;
+    --color-heading: #0f172a;
+    --color-text-strong: #000000;
+
+    --color-border: rgba(0, 0, 0, 0.1);
+
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+}

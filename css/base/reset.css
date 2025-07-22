@@ -1,0 +1,85 @@
+/* ==========================
+   Reset Stylesheet
+   ========================== */
+
+/* 1. Box sizing dan font inheritance */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  line-height: 1.5;
+}
+
+/* 2. Reset elemen-elemen umum */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 3. Button dan input */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 4. Anchor tag */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 5. Table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 6. Others */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+}

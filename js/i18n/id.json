@@ -1,0 +1,19 @@
+{
+  "home": {
+    "hero": {
+      "title": "Bangun Website Profesional untuk Bisnismu",
+      "subtitle": "Kami bantu wujudkan profil online yang modern, cepat, dan dipercaya pelanggan.",
+      "ctaPortfolio": "Lihat Portofolio",
+      "ctaContact": "Hubungi Kami"
+    },
+    "why": {
+      "title": "Mengapa Memilih Kami?",
+      "designTitle": "Desain Responsif",
+      "designDesc": "Tampilan elegan yang berfungsi optimal di semua perangkat.",
+      "speedTitle": "Performa Tinggi",
+      "speedDesc": "Kecepatan & SEO yang siap bersaing di Google.",
+      "supportTitle": "Dukungan Personal",
+      "supportDesc": "Konsultasi gratis dan revisi sampai puas."
+    }
+  }
+}

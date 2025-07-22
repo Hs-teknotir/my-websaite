@@ -1,0 +1,203 @@
+/* ===========================
+   HEADER - SUPER PREMIUM (UPGRADED)
+=========================== */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: var(--z-header);
+  background: rgba(var(--color-surface-rgb, 17, 24, 39), 0.7);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--transition-medium), border-color var(--transition-medium);
+}
+
+.header.scrolled {
+  background: rgba(var(--color-surface-rgb, 17, 24, 39), 0.95);
+  border-color: rgba(var(--color-primary-rgb, 212, 175, 55), 0.3);
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ========== LOGO ========== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.logo-img {
+  width: 36px;
+}
+.logo-text {
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ========== DESKTOP NAVIGATION ========== */
+.nav-desktop {
+  display: flex;
+}
+.nav-links {
+  display: flex;
+  gap: var(--space-6);
+}
+.nav-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--color-primary);
+  transition: width var(--transition-fast);
+}
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ========== ACTIONS - THEME + MENU ========== */
+.actions-desktop {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+#theme-toggle-desktop {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+#theme-toggle-desktop:hover {
+  color: var(--color-primary);
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* ========== MOBILE DRAWER MENU ========== */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100vh;
+  background: var(--color-surface);
+  backdrop-filter: blur(24px);
+  box-shadow: -4px 0 20px rgba(0,0,0,0.4);
+  transition: right var(--transition-medium);
+  z-index: var(--z-modal);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-5) var(--space-4);
+}
+
+.mobile-drawer.open {
+  right: 0;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+.drawer-title {
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  color: var(--color-text-strong);
+}
+.drawer-close {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.drawer-nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+.drawer-nav a:hover,
+.drawer-nav a.active {
+  color: var(--color-primary);
+}
+
+/* ========== THEME TOGGLE INSIDE DRAWER ========== */
+.drawer-footer {
+  margin-top: auto;
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+#theme-toggle-mobile {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+#theme-toggle-mobile:hover {
+  color: var(--color-primary);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .nav-desktop,
+  .actions-desktop {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+@media (min-width: 769px) {
+  .mobile-drawer {
+    display: none !important;
+  }
+  .menu-toggle {
+    display: none !important;
+  }
+}
+
+/* ========== REDUCED MOTION ========== */
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .mobile-drawer,
+  .nav-links a::after {
+    transition: none !important;
+  }
+}

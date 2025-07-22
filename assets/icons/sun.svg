@@ -1,0 +1,76 @@
+<svg width="360" height="360" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradasi emas berlapis -->
+    <radialGradient id="sunCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF8E1"/>
+      <stop offset="40%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </radialGradient>
+
+    <!-- Glow filter -->
+    <filter id="sunGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle shimmer (inner shine) -->
+    <radialGradient id="sunShimmer" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#080808"/>
+
+  <!-- Sinar utama (rays) -->
+  <g stroke="url(#sunCore)" stroke-width="2" stroke-linecap="round" filter="url(#sunGlow)">
+    <!-- 24 rays -->
+    <g transform="translate(180 180)">
+      <g>
+        <!-- Long rays -->
+        <line y1="-90" y2="-140" />
+        <line y1="90" y2="140" />
+        <line x1="-90" x2="-140" />
+        <line x1="90" x2="140" />
+
+        <!-- Diagonal -->
+        <line x1="63.6" y1="-63.6" x2="99" y2="-99"/>
+        <line x1="-63.6" y1="-63.6" x2="-99" y2="-99"/>
+        <line x1="63.6" y1="63.6" x2="99" y2="99"/>
+        <line x1="-63.6" y1="63.6" x2="-99" y2="99"/>
+
+        <!-- Mid-rays -->
+        <line x1="0" y1="-110" x2="0" y2="-130"/>
+        <line x1="0" y1="110" x2="0" y2="130"/>
+        <line x1="-110" y1="0" x2="-130" y2="0"/>
+        <line x1="110" y1="0" x2="130" y2="0"/>
+
+        <!-- Finer detail rays -->
+        <line x1="45" y1="-78" x2="56" y2="-95"/>
+        <line x1="-45" y1="-78" x2="-56" y2="-95"/>
+        <line x1="45" y1="78" x2="56" y2="95"/>
+        <line x1="-45" y1="78" x2="-56" y2="95"/>
+
+        <line x1="78" y1="-45" x2="95" y2="-56"/>
+        <line x1="-78" y1="-45" x2="-95" y2="-56"/>
+        <line x1="78" y1="45" x2="95" y2="56"/>
+        <line x1="-78" y1="45" x2="-95" y2="56"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Matahari inti -->
+  <circle cx="180" cy="180" r="65" fill="url(#sunCore)" filter="url(#sunGlow)"/>
+
+  <!-- Shimmer di tengah -->
+  <circle cx="180" cy="180" r="55" fill="url(#sunShimmer)"/>
+
+  <!-- Detil bintang halus -->
+  <circle cx="220" cy="110" r="1.5" fill="#FFFFFF"/>
+  <circle cx="120" cy="240" r="1.3" fill="#FFD700"/>
+  <circle cx="260" cy="160" r="1.1" fill="#FFF9C4"/>
+</svg>
