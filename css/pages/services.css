@@ -222,7 +222,7 @@
   }
   .packages,
   .addons {
-    padding: 5rem 1.5rem;
+    padding: 5rem 0;
   }
   .cta-final h2 {
     font-size: 2rem;
