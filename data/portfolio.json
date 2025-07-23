@@ -3,7 +3,7 @@
     "id": "001",
     "title": "Website landing page",
     "description": "Desain elegan, kecepatan tinggi, dan UI yang modern untuk personal branding.",
-    "image": "/assets/images/portfolio/portfolio2.PNG",
+    "image": "/assets/images/portfolio/portfolio2.png",
     "tags": ["Portfolio", "HTML", "CSS"],
     "link": "https://hs-teknotir.github.io/Landing-Page/"
   },
@@ -11,7 +11,7 @@
     "id": "002",
     "title": "website company profile",
     "description": "Desain responsif untuk halaman profil perusahaan dengan informasi lengkap dan kontak.",
-    "image": "/assets/images/portfolio/portfolio1.PNG",
+    "image": "/assets/images/portfolio/portfolio1.png",
     "tags": ["Profil", "HTML", "CSS"],
     "link": "https://hs-teknotir.github.io/Company-Profile/"
   }
