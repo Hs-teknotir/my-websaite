@@ -28,7 +28,7 @@ function renderProjectCard(project) {
       <div class="works-content">
         <h3 class="works-name">${project.title}</h3>
         <p class="works-desc">${project.description}</p>
-        <a href="${project.link}" target="_blank" class="works-link btn btn-secondary">
+        <a href="${project.link}" target="_blank" class="works-link btn btn-primary">
           Jelajahi Proyek →
         </a>
       </div>

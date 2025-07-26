@@ -26,7 +26,17 @@ function handleRoute() {
 
   if (render) {
     render(container);
+    setTimeout(() => {
+      // Coba dua-duanya kalau perlu
+      window.scrollTo(0, 0);
+      container.scrollTo?.(0, 0);
+    }, 0);
   } else {
     container.innerHTML = '<h2>404 - Halaman tidak ditemukan</h2>';
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      container.scrollTo?.(0, 0);
+    }, 0);
   }
 }
+

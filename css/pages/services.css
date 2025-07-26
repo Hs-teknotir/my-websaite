@@ -135,7 +135,7 @@
 
 .addon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 .addon-item {
@@ -195,7 +195,6 @@
 }
 .btn-primary {
   background: var(--color-accent);
-  color: #fff;
 }
 .btn-primary:hover {
   background: var(--color-primary);
@@ -223,6 +222,7 @@
   .packages,
   .addons {
     padding: 5rem 0;
+    column-gap: 0;
   }
   .cta-final h2 {
     font-size: 2rem;
